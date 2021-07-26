@@ -58,7 +58,7 @@ public class MeshGenerator : MonoBehaviour
     {
         _vertex = _objects.ConvertAll(__object => __object.position).ToArray();
         
-        _triangles.Clear();
+        _triangles = new List<int>();
         for (int i = 0; i < _objects.Count - 2; i++)
         {
             // Direction triangle.
